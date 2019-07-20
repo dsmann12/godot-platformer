@@ -1,0 +1,10 @@
+-std=c++17
+-fPIC
+-c
+-g3
+-Og
+-I.
+-I/home/david/Documents/Projects/Godot/godot-cpp/godot_headers 
+-I/home/david/Documents/Projects/Godot/godot-cpp/include 
+-I/home/david/Documents/Projects/Godot/godot-cpp/include/core 
+-I/home/david/Documents/Projects/Godot/godot-cpp/include/gen
