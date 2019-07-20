@@ -125,6 +125,8 @@ void Player::_process(float delta) {
   if (velocity.x > 0) {
     if (jumping) {
       animation->play("jumping_right");
+    } else if (direction == DIRECTION::WEST){
+      animation->play("turning_right");
     } else {
       animation->play("run_right");
     }
@@ -133,24 +135,28 @@ void Player::_process(float delta) {
     // animation->play("walk_west");
     if (jumping) {
       animation->play("jumping_left");
+    } else if (direction == DIRECTION::EAST) {
+      animation->play("turning_left");
     } else {
       animation->play("run_left");
     }
     direction = DIRECTION::WEST;
   } else if (velocity.y > 0) {
     // animation->play("walk_south");
-    direction = DIRECTION::SOUTH;
+    //direction = DIRECTION::SOUTH;
   } else if (velocity.y < 0) {
     // animation->play("walk_north");
-    direction = DIRECTION::NORTH;
+    //direction = DIRECTION::NORTH;
   } else {
-    animation->play("idle");
+    //animation->play("idle");
     switch (direction) {
       case DIRECTION::WEST:
         // animation->play("idle_west");
+        animation->play("aiming_left");
         break;
       case DIRECTION::EAST:
         // animation->play("idle_east");
+        animation->play("aiming_right");
         break;
       case DIRECTION::NORTH:
         // animation->play("idle_north");
@@ -158,6 +164,7 @@ void Player::_process(float delta) {
       case DIRECTION::SOUTH:
       default:
         // animation->play("idle_south");
+        animation->play("idle");
         break;
     }
   }
