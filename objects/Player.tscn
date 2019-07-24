@@ -489,7 +489,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 544, 134, 30, 40 )
+region_rect = Rect2( 430, 134, 30, 40 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 anims/aiming_left = SubResource( 1 )
@@ -503,6 +503,7 @@ anims/turning_left = SubResource( 8 )
 anims/turning_right = SubResource( 9 )
 
 [node name="Sprite2" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 352, 134, 30, 40 )
@@ -517,7 +518,37 @@ position = Vector2( 0, 1.96 )
 shape = SubResource( 10 )
 
 [node name="Gun" type="Node2D" parent="."]
-position = Vector2( 15, -7 )
+position = Vector2( -15, -7 )
+
+[node name="Sprite" type="Sprite" parent="Gun"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1223.86, 1741.34, 10.9432, 10.9432 )
+
+[node name="Sprite2" type="Sprite" parent="Gun"]
+texture = ExtResource( 2 )
+offset = Vector2( -4, -4 )
+region_enabled = true
+region_rect = Rect2( 1223.86, 1741.34, 10.9432, 10.9432 )
+
+[node name="Sprite3" type="Sprite" parent="Gun"]
+texture = ExtResource( 2 )
+offset = Vector2( -4, 4 )
+region_enabled = true
+region_rect = Rect2( 1223.86, 1741.34, 10.9432, 10.9432 )
+
+[node name="Sprite4" type="Sprite" parent="Gun"]
+visible = false
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1206.13, 1743.24, 15.8489, 16.981 )
+
+[node name="Sprite5" type="Sprite" parent="Gun"]
+visible = false
+z_index = -1
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1201.14, 1798.91, 15.8154, 10.3929 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
